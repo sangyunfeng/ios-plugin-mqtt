@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="ios-plugin-mqtt" version="1.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>mqtt</name>
+    <js-module name="alipay" src="www/mqtt.js">
+        <clobbers target="cordova.plugins.CordovaMqTTPlugin"/>
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="mqttPlugin">
+                <param name="ios-package" value="MqttPlugin"/>
+            </feature>
+        </config-file>
+
+		<header-file src="src/ios/lib/MQTTClient.h"/>
+		<header-file src="src/ios/lib/MQTTPersistence.h"/>
+
+		<header-file src="src/ios/lib/MQTTCFSocketEncoder.h"/>
+		<source-file src="src/ios/lib/MQTTCFSocketEncoder.m"/>
+		<header-file src="src/ios/lib/MQTTDecoder.h"/>
+		<source-file src="src/ios/lib/MQTTDecoder.m"/>
+		<header-file src="src/ios/lib/MQTTInMemoryPersistence.h"/>
+		<source-file src="src/ios/lib/MQTTInMemoryPersistence.m"/>
+		<header-file src="src/ios/lib/MQTTLog.h"/>
+		<source-file src="src/ios/lib/MQTTLog.m"/>
+		<header-file src="src/ios/lib/MQTTSessionManager.h"/>
+		<source-file src="src/ios/lib/MQTTSessionManager.m"/>
+		<header-file src="src/ios/lib/MQTTSessionSynchron.h"/>
+		<source-file src="src/ios/lib/MQTTSessionSynchron.m"/>
+		<header-file src="src/ios/lib/MQTTSSLSecurityPolicy.h"/>
+		<source-file src="src/ios/lib/MQTTSSLSecurityPolicy.m"/>
+		<header-file src="src/ios/lib/MQTTSSLSecurityPolicyDecoder.h"/>
+		<source-file src="src/ios/lib/MQTTSSLSecurityPolicyDecoder.m"/>
+		<header-file src="src/ios/lib/MQTTSSLSecurityPolicyEncoder.h"/>
+		<source-file src="src/ios/lib/MQTTSSLSecurityPolicyEncoder.m"/>
+		<header-file src="src/ios/lib/MQTTStrict.h"/>
+		<source-file src="src/ios/lib/MQTTStrict.m"/>
+
+		<header-file src="src/ios/lib/MQTTCFSocketDecoder.h"/>
+		<source-file src="src/ios/lib/MQTTCFSocketDecoder.m"/>
+		<header-file src="src/ios/lib/MQTTCFSocketTransport.h"/>
+		<source-file src="src/ios/lib/MQTTCFSocketTransport.m"/>
+		<header-file src="src/ios/lib/MQTTCoreDataPersistence.h"/>
+		<source-file src="src/ios/lib/MQTTCoreDataPersistence.m"/>
+		<header-file src="src/ios/lib/MQTTMessage.h"/>
+		<source-file src="src/ios/lib/MQTTMessage.m"/>
+		<header-file src="src/ios/lib/MQTTProperties.h"/>
+		<source-file src="src/ios/lib/MQTTProperties.m"/>
+		<header-file src="src/ios/lib/MQTTSession.h"/>
+		<source-file src="src/ios/lib/MQTTSession.m"/>
+		<header-file src="src/ios/lib/MQTTSessionLegacy.h"/>
+		<source-file src="src/ios/lib/MQTTSessionLegacy.m"/>
+		<header-file src="src/ios/lib/MQTTSessionSynchron.h"/>
+		<source-file src="src/ios/lib/MQTTSessionSynchron.m"/>
+		<header-file src="src/ios/lib/MQTTTransport.h"/>
+		<source-file src="src/ios/lib/MQTTTransport.m"/>
+		<header-file src="src/ios/lib/MQTTSSLSecurityPolicyTransport.h"/>
+		<source-file src="src/ios/lib/MQTTSSLSecurityPolicyTransport.m"/>
+
+		<header-file src="src/ios/lib/MyMqtt.h"/>
+		<source-file src="src/ios/lib/MyMqtt.m"/>
+		<header-file src="src/ios/mqtt.h"/>
+        <source-file src="src/ios/mqtt.m"/>
+
+    </platform>
+</plugin>
+
