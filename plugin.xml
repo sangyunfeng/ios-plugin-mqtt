@@ -50,8 +50,6 @@
 		<source-file src="src/ios/lib/MQTTSession.m"/>
 		<header-file src="src/ios/lib/MQTTSessionLegacy.h"/>
 		<source-file src="src/ios/lib/MQTTSessionLegacy.m"/>
-		<header-file src="src/ios/lib/MQTTSessionSynchron.h"/>
-		<source-file src="src/ios/lib/MQTTSessionSynchron.m"/>
 		<header-file src="src/ios/lib/MQTTTransport.h"/>
 		<source-file src="src/ios/lib/MQTTTransport.m"/>
 		<header-file src="src/ios/lib/MQTTSSLSecurityPolicyTransport.h"/>
