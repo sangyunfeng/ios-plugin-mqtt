@@ -23,6 +23,7 @@ cordova plugin add ios-plugin-mqtt
       port:"端口号"
     }
 
+```
 //案例
 cordova.plugins.CordovaMqTTPlugin.connect({
 	url:"tcp://127.0.0.1", 
@@ -38,27 +39,20 @@ cordova.plugins.CordovaMqTTPlugin.connect({
 	onConnectionLost:function (){//连接断开丢失回调
 	}
 });
-
+```
 
 ### 2.断开mqtt连接
     接口：disconnect(options)
     参数：options
-`
+```
 //案例
-`
-`
 cordova.plugins.CordovaMqTTPlugin.disconnect({
-`
-`      success:function(s){//连接断开成功回调
-`
-`	},
-`
-`	error:function(e){//连接断开出错信息回调
-`
-`	}
-`
-`});
-`
+      success:function(s){//连接断开成功回调
+	},
+	error:function(e){//连接断开出错信息回调
+	}
+});
+```
 
 ### 3.订阅主题
     接口：subscribe(options)
@@ -68,26 +62,17 @@ cordova.plugins.CordovaMqTTPlugin.disconnect({
       topic:“主题”
       qos:“发送质量”
     }
-`
+```
 //案例
-`
-`cordova.plugins.CordovaMqTTPlugin.subscribe({
-     `
-` topic:"topic/*",
-    `
-`  qos:0,
-  `
-`    success:function(s){//订阅主题成功回调
-`
-`	},
-`
-`	error:function(e){//订阅主题出错信息回调
-`
-`	}
-`
-`});
-`
-
+cordova.plugins.CordovaMqTTPlugin.subscribe({
+ topic:"topic/*",
+  qos:0,
+    success:function(s){//订阅主题成功回调
+	},
+	error:function(e){//订阅主题出错信息回调
+	}
+});
+```
 ### 4.解除订阅主题
     接口：unsubscribe(options)
     参数：options
@@ -95,21 +80,14 @@ cordova.plugins.CordovaMqTTPlugin.disconnect({
     options={
       topic:“主题”
     }
-`
+```
 //案例
-`
-`
 cordova.plugins.CordovaMqTTPlugin.unsubscribe({
-`
-`
       topic:"topic/*",
- `
-`     success:function(s){//解除订阅主题成功回调},
-`
-`	error:function(e){//解除订阅主题出错信息回调}
-`
-`});
-`
+     success:function(s){//解除订阅主题成功回调},
+	error:function(e){//解除订阅主题出错信息回调}
+});
+```
 
 ### 5.向主题发送信息
     接口：publish(options)
@@ -120,28 +98,19 @@ cordova.plugins.CordovaMqTTPlugin.unsubscribe({
       qos:“发送质量”
       payload:"发送信息"
     }
-`
+```
 //案例
-`
-`
 cordova.plugins.CordovaMqTTPlugin.publish({
-      `
-`topic:"topic/*",
-    `
-`  qos:0
-  `
-`    payload:'hello world'
-`
-`      success:function(s){//发送信息成功回调
-`
-`	},
-`
-`	error:function(e){//发送信息出错信息回调
-`
-`	}
-`
-`});
-`
+	topic:"topic/*",
+  	qos:0
+    	payload:'hello world'
+        success:function(s){//发送信息成功回调
+	},
+	error:function(e){//发送信息出错信息回调
+	}
+
+});
+```
 
 
 ### 6.设置侦听接收信息的主题
@@ -149,17 +118,9 @@ cordova.plugins.CordovaMqTTPlugin.publish({
     参数说明：
       theme:“正则匹配相关的主题”
       callback:"开启侦听回调"
-`
+```
 //案例
-`
-`cordova.plugins.CordovaMqTTPlugin.listen(theme:"topic/*",
-  `
-`       function(e){//开启侦听回调
-`
-`});
-`
-
-
-
-
-
+cordova.plugins.CordovaMqTTPlugin.listen(theme:"topic/*",
+       function(e){//开启侦听回调
+});
+```
