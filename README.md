@@ -22,38 +22,23 @@ cordova plugin add ios-plugin-mqtt
       url:“连接地址 例如：tcp://127.0.0.1”
       port:"端口号"
     }
-`
+
 //案例
-`
-`
 cordova.plugins.CordovaMqTTPlugin.connect({
-`
-`	url:"tcp://127.0.0.1", 
-`
-`	port:3000,
-`
-`	clientId:"1002010",
-`
-`	username:"admin",
-`
-`	password:"123",
-`
-`	keepAlive:86400,
-`
-`	success:function(s){//连接成功回调
-`
-`	},
-`
-`	error:function(e){//连接出错信息回调
-`
-`	},
-`
-`	onConnectionLost:function (){//连接断开丢失回调
-`
-`	}
-`
-`});
-`
+	url:"tcp://127.0.0.1", 
+	port:3000,
+	clientId:"1002010",
+	username:"admin",
+	password:"123",
+	keepAlive:86400,
+	success:function(s){//连接成功回调
+	},
+	error:function(e){//连接出错信息回调
+	},
+	onConnectionLost:function (){//连接断开丢失回调
+	}
+});
+
 
 ### 2.断开mqtt连接
     接口：disconnect(options)
